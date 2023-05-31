@@ -1,4 +1,6 @@
+if((NOT TINYXML2_LIBRARY) AND (NOT TINYXML2_INCLUDE_DIR))
 find_package(TINYXML2 CONFIG QUIET)
+endif()
 
 if(NOT TARGET tinyxml2::tinyxml2)
     if(TINYXML2_FOUND)
